@@ -346,7 +346,7 @@ color: white;
 font-family: 'Roboto', sans-serif;
 max-width: 700px;
 padding: 20px;
-background: rgba(0, 0, 0, 0.5); fondo semitransparente para que el texto se lea mejor
+background: rgba(0, 0, 0, 0.5);
 /* border-radius: 10px; */
 }
 
@@ -360,7 +360,7 @@ font-size: 18px;
 line-height: 1.5;
 }
 
-/* wheel program maybach */
+/* wheel  maybach */
 
 .wheel-program {
   padding: 60px 20px;
@@ -375,7 +375,7 @@ line-height: 1.5;
   max-width: 1100px;
   margin: 0 auto;
   gap: 40px;
-  flex-wrap: wrap; /* para que se adapte en móviles */
+  flex-wrap: wrap; /*lo hace mas responsv */
 }
 
 .wheel-text {
