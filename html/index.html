@@ -5,104 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercedes Project</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Mercedes-Benz</div>
+
+        
+      <nav>
+            <div class="logo"><a href="/html/index.html"><img src="/assets/images/logo.png" alt="Logo Mercedes" ></a></div>
+            <!-- <div class="navlogo"><h1>Mercedes-Benz</h1></div> -->
                 <ul class="nav-links">
-                    <li><a href="#">Electric</a></li>
-                    <li><a href="#">Maybach</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Stores</a></li>
+                    <li><a href="#">ELECTRIC</a></li>
+                    <li><a href="#">MAYBACH</a></li>
+                    <li><a href="#">ACCESORIES</a></li>
+                    <li><a href="#">STORES</a></li>
                 </ul>
             <div class="icons">
-                <!-- Icons like user or menu can go here -->
+               <a href="#"><img src="/assets/images/login.png" alt="login"></a>
+               <a href="#"><img src="/assets/images/shoppingcartblack.png" alt="shopping cart"></a>
             </div>
-        </nav>
+      </nav>
+      
 
-        <section class="hero">
+      <section class="power">
             <h1>New Mercedes CLS</h1>
             <p>The Power In Your Hands</p>
-            <img src="/assets/images/mainbanner.webp" alt="mercedes banner" width="500px" height="300px">
-         </section>
+      </section>
   </header>
 
    <section class="car-categories">
 
         <article class="car-card">
+            <img src="/assets/images/cabriolet.avif" alt="cabriolet" width="200px" height="200px">
             <h3>Electric</h3>
             <p>Mercedes EQS Cabriolet</p>
-            <img src="/assets/images/cabriolet.avif" alt="cabriolet" width="200px" height="200px">
-            <button>More info</button>
+            
+            
+             <div class="colors">
+              <span class="red-dot"></span>
+              <span class="blue-dot"></span>
+              <span class="green-dot"></span>
+             </div>
+             <button>More info</button>
         </article>
 
         <article class="car-card">
+            <img src="/assets/images/GLSSUV.webp" alt="glc" width="200px" height="200px">
             <h3>Hybrid</h3>
             <p>Mercedes GLC SUV</p>
-            <img src="/assets/images/GLSSUV.webp" alt="glc" width="200px" height="200px">
+              <div class="colors">
+              <span class="red-dot"></span>
+              <span class="blue-dot"></span>
+              <span class="green-dot"></span>
+             </div>
             <button>More info</button>
         </article>
 
         <article class="car-card">
+            <img src="/assets/images/gclass.png" alt="gclass" width="200px" height="200px">
             <h3>Hybrid</h3>
             <p>Mercedes Benz G-Class</p>
-            <img src="/assets/images/gclass.png" alt="gclass" width="200px" height="200px">
+              <div class="colors">
+              <span class="red-dot"></span>
+              <span class="blue-dot"></span>
+              <span class="green-dot"></span>
+             </div>
+            
             <button>More info</button>
         </article>
 
         <article class="car-card">
+            <img src="/assets/images/mercedeamgdef.png" alt="eqs" width="200px" height="200px">
             <h3>Electric</h3>
-            <p>Mercedes SQE SUV</p>
-            <img src="/assets/images/eqssuv.png" alt="eqs" width="200px" height="200px">
+            <p>Mercedes AMG CT</p>
+              <div class="colors">
+              <span class="red-dot"></span>
+              <span class="blue-dot"></span>
+              <span class="green-dot"></span>
+             </div>
             <button>More info</button>
         </article>
 
   </section>
 
-  <!-- Dealer Locator -->
-  <section class="dealer-locator">
+  <section class="dealer-find">
     <h2>Find your nearest Mercedes dealer</h2>
-    <p>Browse over 1000 dealers worldwide...</p>
-    <button>Find a partner store near you</button>
+    <p>Browse over 1000 dealers worldwide,and find the one thats
+      best suits your situation.</p>
+    
+    <div class="dealer-box">
+      <img src="/assets/images/dealerlocation.jpg" alt="Location dealer">
+      <div class="container-dealer">
+        <h3>Discover your local Mercedes partner Store</h3>
+        <button>Find a partner store near you</button>
+      </div>
+    </div>
   </section>
 
   <!-- Highlights -->
   <section class="highlights">
 
-        <div class="highlight">
+    <article class="highlight-card">
+            <!-- <img src="/assets/images/mercedeswheel.jpg" alt="Comfort"> -->
             <h3>Comfort</h3>
+            <img src="/assets/images/mercedeswheel.jpg" alt="Comfort">
             <button>More info</button>
-        </div>
+    </article>
 
-        <div class="highlight">
+    <article class="highlight-card">
+            <!-- <img src="/assets/images/mercedeslight.jpg" alt="Technology"> -->
             <h3>Technology</h3>
-            <button>More info</button>
-        </div>
+           <img src="/assets/images/mercedeslight.jpg" alt="Technology">
 
-        <div class="highlight">
-            <h3>Accessories</h3>
             <button>More info</button>
-        </div>
+    </article>
+
+    <article class="highlight-card">
+            <!-- <img src="/assets/images/mercederaccesories.jpg" alt="Accesories"> -->
+            <h3>Accesories</h3>
+            <img src="/assets/images/mercederaccesories.jpg" alt="Accesories">
+
+            <button>More info</button>
+    </article>
 
   </section>
 
-  <!-- Featured Vehicle -->
-  <section class="featured-red">
-    <h2>Red as Tentation</h2>
-    <p>Good design is when shape serves function and stirs emotion...</p>
-  </section>
+  <!-- featured car -->
+<section class="featured-red">
+  <div class="featured-text">
+    <h2>Red as Temptation</h2>
+    <p>Good design is what drives us, and we're proud to share that
+      Mercedes-Maybach has already won the prestigious Best Design Award 2023, 
+      as judged by the world's best product designers.
+    </p>
+  </div>
+</section>
+
 
   <!-- Wheel Program -->
-  <section class="wheel-program">
-    <h3>The Mercedes-Maybach Wheel Programme</h3>
-    <p>Learn more about our exclusive wheel options.</p>
-    <button>Learn More</button>
-  </section>
+<section class="wheel-program">
+  <div class="wheel-content">
+    <div class="wheel-text">
+      <h3>The Mercedes-Maybach Wheel Programme</h3>
+      <p>  The exclusive Mercedes-Maybach wheel programme, e.g. with optional 53.3 cm (21")
+      Maybach forged wheel in multi-spoke design.</p>
+      <button>Learn More</button>
+    </div>
 
-  <!-- Contact Call-To-Action -->
-  <section class="cta-contact">
-    <p>Ready to own the car of your dreams?</p>
+    <div class="wheel-image">
+      <img src="/assets/images/maybach.jpg" alt="Mercedes wheel">
+    </div>
+  </div>
+</section>
+
+
+  <section class="contact">
+    <p>Ready to own the car of your dreams? Mercedes-Maybach is only
+      available by appointment only.
+    </p>
     <button>Contact Now</button>
   </section>
 
@@ -111,8 +171,14 @@
 
     <section class="newsletter">
       <h3>Join the power</h3>
+      <p>Subscribe to our newsletter;</p>
       <input type="email" placeholder="Enter your email address" />
       <button>Subscribe</button>
+
+      <div class="checkbox-container">
+      <input type="checkbox" id="accept" />
+      <label for="accept">By signing up, I agree to the <a href="#">privacy policy</a> of Mercedes.</label>
+      </div>
     </section>
 
     <section class="footer-links">
@@ -144,6 +210,12 @@
       </div>
     </section>
     
+
+    <section class="credits">
+  <p>This project was created by Adrián Coelho as part of a school project. All rights to Mercedes-Benz trademarks 
+    and images belong to their respective owners.</p>
+</section>
+
   </footer>
 
 
