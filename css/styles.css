@@ -182,7 +182,9 @@ background-color: blue;
 background-color: green; 
 }
 
-.car-card button {
+/* cambio de button a a para poner links a los productos 
+reales */
+/* .car-card button {
 padding: 8px 16px;
 background-color: black;
 color: white;
@@ -195,6 +197,24 @@ transition: background-color 0.3s ease;
 
 .car-card button:hover {
 background-color: #444;
+} */
+
+.btn {
+display: inline-block;
+padding: 10px 20px 10px 20px;
+background-color: #000;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+font-weight: 100;
+transition: background-color 0.3s ease;
+font-family: 'Roboto', sans-serif;
+font-size: 12px;
+
+}
+
+.btn:hover {
+background-color: #333;
 }
 
 /* mapa y location */
