@@ -2,20 +2,39 @@
 margin-left: 0;
 }
 
+
+/*Correction: El primero es el uso de variables en CSS. Es una forma muy práctica (y bastante común) de manejar valores en varias partes del proyecto y 
+tenerlos todos centralizados.*/
+:root {
+  --primary-color: #000;       /* nav, botones principales */
+  --secondary-color: #f5f5f5;  /*fondos de sections*/
+  --accent-color: #d7d7d7;     /* hover y botones secundarios */
+  --text-color1: #333;         /* titulos */
+  --text-color2: #666;         /* prrafos, subtitulos */
+  --btn-color: #000;            /* color de fondo botones */
+  --btn-hover: #333;            /* hover botones */
+  --font-main: 'Roboto', sans-serif; /* fuente principal */
+  --card-shadow: rgba(0,0,0,0.1); /* sombra ligera para tarjetas */
+  --card-shadow-hover: rgba(0,0,0,0.2); /* sombra al hover */
+}
+
+
 /* nav + login superior = firstbar*/
 
 nav {
 display: flex;
 justify-content: space-between;
 align-items: center;
-border: solid rgb(0, 0, 0);
-background-color: rgb(0, 0, 0);
+flex-wrap: wrap; /*responsive correction*/
+border: solid var(--primary-color);
+background-color: var(--primary-color);
 padding: 5px;
 }
 
 .logo img {
 height: 40px;
 width: auto;
+max-width: 150px;
 padding-left: 20px;
 }
 
@@ -54,7 +73,7 @@ display: block;
 .nav-links a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-main);
     font-size: 13px;
     ;
 }
@@ -69,8 +88,8 @@ text-decoration: none;
 height: 16px;
 width: auto;
 cursor: pointer;
-margin: 10px;
-margin-right: 50px;
+flex-shrink: 1;/*Crrection responsive para que se reduzcan si hace falta*/
+margin: 10px 10px 10px 0;
 }
 
 /* Power y texto*/
@@ -80,7 +99,41 @@ background-image: url('/assets/images/mercedesfront.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 padding-bottom: 500px;
+position: relative;
 }
+
+/*correccion de la imagen en diferentes pantallas pa' evitar desajustes*/
+
+    /*tablets por ej. menos altura*/
+    @media (max-width: 1024px) {
+      .power {
+        padding-bottom: 350px;
+      }
+    }
+
+    /*moviles con menos altura*/
+    @media (max-width: 768px) {
+      .power {
+        padding-bottom: 250px; 
+      }
+    }
+
+    @media (max-width: 480px) {
+      .power {
+        padding-bottom: 180px; /*minimo*/
+      }
+
+.power h1 {
+    font-size: 28px; /*titulo + pequeño ñ*/
+    margin: 15px 0 0 10px;
+  }
+
+  .power p {
+    font-size: 14px; /*subtitulo + pequeño */
+    margin: 50px 0 0 10px;
+  }
+}
+
 .power h1,
 .power p {
     position: absolute;
@@ -110,7 +163,7 @@ display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 gap: 40px;
 padding: 40px 20px;
-background-color: #f5f5f5;
+background-color: var(--secondary-color);
 box-sizing: border-box;
 }
 
@@ -119,7 +172,7 @@ background-color: white;
 border-radius: 10px;
 padding: 20px;
 text-align: center;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 10px var(--car --card-shadow);
 font-family: 'Roboto', sans-serif;
 transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -127,7 +180,7 @@ transition: transform 0.2s ease, box-shadow 0.2s ease;
 /* para darle toque de sombra al pasar el raton */
 .car-card:hover {
 transform: translateY(-5px);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+box-shadow: 0 8px 20px var(--card-shadow-hover);
 }
 
 /* las fotos de los coches */
@@ -202,7 +255,7 @@ background-color: #444;
 .btn {
 display: inline-block;
 padding: 10px 20px 10px 20px;
-background-color: #000;
+background-color:var(--btn-color);
 color: #fff;
 text-decoration: none;
 border-radius: 5px;
@@ -214,7 +267,8 @@ font-size: 12px;
 }
 
 .btn:hover {
-background-color: #333;
+/* background-color: #333; */
+background-color: var(--btn-hover)
 }
 
 /* mapa y location */
