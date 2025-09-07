@@ -76,7 +76,7 @@ nav {
 
 /* Power y texto*/
 .power {
-    background-image: url('/assets/images/mercedesfront.jpg');
+    background-image: url('../assets/images/mainbanner2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 500px;
@@ -327,7 +327,7 @@ vacios pero por replicar el ejemplo de figma del proyecto */
     position: relative;
     width: 100%;
     min-height: 50vh;
-    background-image: url('/assets/images/featurered.webp');
+    background-image: url('../assets/images/featurered.webp');
     background-size: cover;
     background-position: center;
     display: flex;
