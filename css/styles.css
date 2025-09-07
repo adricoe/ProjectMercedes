@@ -597,7 +597,7 @@ footer label {
     }
 }
 
-/*moviles con menos altura*/
+/* moviles con menos altura y tablets con ajustes */
 @media (max-width: 768px) {
     .power {
         padding-bottom: 250px;
