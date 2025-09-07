@@ -597,6 +597,18 @@ footer label {
     }
 }
 
+/* Tablets like 800x1280 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-dealer {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+        padding: 20px;
+    }
+}
+
+
 /* moviles con menos altura y tablets con ajustes */
 @media (max-width: 768px) {
     .power {
@@ -619,7 +631,7 @@ footer label {
         width: 100%;
     }
     .icons {
-        margin-top: 10px;
+            margin-top: 10px;
     }
 
     .dealer-find h2 {
