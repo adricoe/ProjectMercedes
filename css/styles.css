@@ -1,73 +1,56 @@
-*{
-margin-left: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 
 /*Correction: El primero es el uso de variables en CSS. Es una forma muy práctica (y bastante común) de manejar valores en varias partes del proyecto y 
 tenerlos todos centralizados.*/
 :root {
-  --primary-color: #000;       /* nav, botones principales */
-  --secondary-color: #f5f5f5;  /*fondos de sections*/
-  --accent-color: #d7d7d7;     /* hover y botones secundarios */
-  --text-color1: #333;         /* titulos */
-  --text-color2: #666;         /* prrafos, subtitulos */
-  --btn-color: #000;            /* color de fondo botones */
-  --btn-hover: #333;            /* hover botones */
-  --font-main: 'Roboto', sans-serif; /* fuente principal */
-  --card-shadow: rgba(0,0,0,0.1); /* sombra ligera para tarjetas */
-  --card-shadow-hover: rgba(0,0,0,0.2); /* sombra al hover */
+    --primary-color: #000;      /* nav, botones principales */
+    --secondary-color: #f5f5f5;  /*fondos de sections*/
+    --accent-color: #d7d7d7;    /* hover y botones secundarios */
+    --text-color1: #333;         /* titulos */
+    --text-color2: #666;         /* prrafos, subtitulos */
+    --btn-color: #000;           /* color de fondo botones */
+    --btn-hover: #333;           /* hover botones */
+    --font-main: 'Roboto', sans-serif; /* fuente principal */
+    --card-shadow: rgba(0,0,0,0.1); /* sombra ligera para tarjetas */
+    --card-shadow-hover: rgba(0,0,0,0.2); /* sombra al hover */
 }
 
 
 /* nav + login superior = firstbar*/
-
 nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap; /*responsive correction*/
-border: solid var(--primary-color);
-background-color: var(--primary-color);
-padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /*responsive correction*/
+    border: solid var(--primary-color);
+    background-color: var(--primary-color);
+    padding: 5px 20px;
 }
 
 .logo img {
-height: 40px;
-width: auto;
-max-width: 150px;
-padding-left: 20px;
+    height: 40px;
+    width: auto;
+    max-width: 150px;
+    padding-left: 0;
 }
-
-/* .navlogo h1 {
-font-size: 24px;
-margin: 0;             
-padding: 0;            
-color: white;          
-font-weight: bold;  
-white-space: nowrap;    
-}
-
-.navlogo {
-padding-left: 20px;
-flex-shrink: 0; 
-margin: 0 20px;
-} */
 
 .nav-links {
-display: flex;
-gap: 20px;
-list-style: none;
-padding: 0;
-margin: 0;
-margin-right: 20px;
-padding-left: 20px;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links li {
-text-decoration: none;
-color: white;
-padding: 10px 15px;
-display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
 }
 
 .nav-links a {
@@ -75,580 +58,608 @@ display: block;
     color: rgb(255, 255, 255);
     font-family: var(--font-main);
     font-size: 13px;
-    ;
 }
 
 .nav-links a:hover,
 .nav-links a:visited,
 .nav-links a:focus {
-text-decoration: none;
+    text-decoration: none;
 }
 
 .icons img {
-height: 16px;
-width: auto;
-cursor: pointer;
-flex-shrink: 1;/*Crrection responsive para que se reduzcan si hace falta*/
-margin: 10px 10px 10px 0;
+    height: 16px;
+    width: auto;
+    cursor: pointer;
+    flex-shrink: 1; /*Crrection responsive para que se reduzcan si hace falta*/
+    margin: 10px 10px 10px 0;
 }
 
 /* Power y texto*/
 .power {
-/* background-image: url('/assets/images/mainbanner2.jpg') ; */
-background-image: url('/assets/images/mercedesfront.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-padding-bottom: 500px;
-position: relative;
-}
-
-/*correccion de la imagen en diferentes pantallas pa' evitar desajustes*/
-
-    /*tablets por ej. menos altura*/
-    @media (max-width: 1024px) {
-      .power {
-        padding-bottom: 350px;
-      }
-    }
-
-    /*moviles con menos altura*/
-    @media (max-width: 768px) {
-      .power {
-        padding-bottom: 250px; 
-      }
-    }
-
-    @media (max-width: 480px) {
-      .power {
-        padding-bottom: 180px; /*minimo*/
-      }
-
-.power h1 {
-    font-size: 28px; /*titulo + pequeño ñ*/
-    margin: 15px 0 0 10px;
-  }
-
-  .power p {
-    font-size: 14px; /*subtitulo + pequeño */
-    margin: 50px 0 0 10px;
-  }
+    background-image: url('/assets/images/mercedesfront.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 500px;
+    position: relative;
 }
 
 .power h1,
 .power p {
     position: absolute;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .power h1 {
-color: white; 
-font-size: 50px;
-margin: 20px 0 0 15px;
-font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    margin: 20px 0 0 15px;
 }
 
 .power p {
-color: white;
-font-size: 20px;
-margin: 70px 0 0 15px;
-font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 70px 0 0 15px;
 }
 
 /* cards d los coches en dos filas, pirmero en general y luego individual */
-/* en este caso si lo queremso un poco mas resposive para que 
-se adapte en la pantalla, grid template columns con el autofit
-(adapta segun espacio disponible) y minmax (250px por tarjeta asi 
-no se encogen mucho y 1fr para que ocupe el espacio) */
 .car-categories {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 40px;
-padding: 40px 20px;
-background-color: var(--secondary-color);
-box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: var(--secondary-color);
 }
 
 .car-card {
-background-color: white;
-border-radius: 10px;
-padding: 20px;
-text-align: center;
-box-shadow: 0 0 10px var(--car --card-shadow);
-font-family: 'Roboto', sans-serif;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px var(--card-shadow);
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* para darle toque de sombra al pasar el raton */
 .car-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 20px var(--card-shadow-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--card-shadow-hover);
 }
 
 /* las fotos de los coches */
 .car-card img {
-width: 100%;
-/* height: auto; */
-/* cone ste las imagenes se aplican con su tamano orig y todo se mueve porque las img tienen distintas medidas */
-height: 160px;
-max-height: 180px;
-object-fit: contain;
-margin-bottom: 10px;
+    width: 100%;
+    height: 160px;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .car-card h3 {
-font-size: 18px;
-color: #333;
-margin: 10px 0 5px;
-text-transform: uppercase;
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px;
+    text-transform: uppercase;
 }
 
 .car-card p {
-font-size: 16px;
-color: #666;
-margin-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
 }
 
 /* los circulitos de colores q en este caso van a ser tags 
 vacios pero por replicar el ejemplo de figma del proyecto */
-
 .colors {
-margin: 10px 0;
+    margin: 10px 0;
 }
 
 .colors span {
-display: inline-block;
-width: 15px;
-height: 15px;
-border-radius: 50%;
-margin: 0 5px;
-border: 1px solid #ccc;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 1px solid #ccc;
 }
 
 .red-dot { 
-background-color: red; 
+    background-color: red; 
 }
 
 .blue-dot { 
-background-color: blue; 
+    background-color: blue; 
 }
 
 .green-dot {
-background-color: green; 
+    background-color: green; 
 }
-
-/* cambio de button a a para poner links a los productos 
-reales */
-/* .car-card button {
-padding: 8px 16px;
-background-color: black;
-color: white;
-border: none;
-border-radius: 5px;
-font-family: 'Roboto', sans-serif;
-cursor: pointer;
-transition: background-color 0.3s ease;
-}
-
-.car-card button:hover {
-background-color: #444;
-} */
 
 .btn {
-display: inline-block;
-padding: 10px 20px 10px 20px;
-background-color:var(--btn-color);
-color: #fff;
-text-decoration: none;
-border-radius: 5px;
-font-weight: 100;
-transition: background-color 0.3s ease;
-font-family: 'Roboto', sans-serif;
-font-size: 12px;
-
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 100;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
 }
 
 .btn:hover {
-/* background-color: #333; */
-background-color: var(--btn-hover)
+    background-color: var(--btn-hover);
 }
 
 /* mapa y location */
-.dealer-find h2,
-.dealer-find p{
-font-family: roboto;
-margin: 20px;
-
+.dealer-find {
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
 }
 
-.dealer-find h2{
-font-size: 50px;
-font-weight: 200;
+.dealer-find h2 {
+    font-size: 50px;
+    font-weight: 200;
+    margin: 20px 20px 10px;
+    color: #333;
+}
+
+.dealer-find p {
+    margin: 10px 20px 40px;
+    color: #666;
 }
 
 .dealer-box {
-position: relative;
-width: 100%;
-max-width: 100%;
-margin: 0 auto;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .dealer-box img {
-width: 100%;
-height: 700px;
-display: block;
-/* padding-left: 5px ; */
+    width: 100%;
+    height: 700px;
+    display: block;
+    object-fit: cover;
 }
 
 .container-dealer {
-max-width: 400px;
-width: 80%;
-position: absolute;
-top: 70%;
-left: 20%;
-transform: translate(-50%, -50%);
-background-color: rgba(255, 255, 255, 0.3); 
-backdrop-filter: blur(10px); 
--webkit-backdrop-filter: blur(10px); 
-color: rgb(255, 255, 255);
-font-family: Roboto;
-font-size: 30px;
-padding: 15px;
-/* border: solid 2px white; */
-border-radius: 15px;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 20px;
-text-align: center;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    font-family: Roboto;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .container-dealer h3 {
-word-wrap: break-word;
-overflow-wrap: break-word;
-max-width: 100%;
-white-space: normal;
-font-size: 28px; 
-font-weight: 100;
-line-height: 1.3; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 1.3;
 }
 
 .container-dealer button {
-padding: 15px 90px;
-font-size: 16px;
-background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
-border: none;
-border-radius: 8px;
-cursor: pointer;
-transition: background-color 0.3s ease;
+    padding: 15px 90px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .container-dealer button:hover {
-background-color: #d7d7d7;
+    background-color: #d7d7d7;
 }
 
 /* highllights */
 .highlights {
-display: flex;
-justify-content: space-around;
-gap: 30px;
-padding: 40px 20px 40px 20px;
-background-color: #dcdcdc;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #dcdcdc;
 }
 
 .highlight-card {
-color: rgb(0, 0, 0);
-text-align: center;
-padding: 20px;
-border-radius: 10px;
-width: 250px;
-border: solid 1px;
-box-shadow: 0 0 10px 0 rgb(167, 167, 167);
-transition:  transform 0.2 ease;
-background-color: white;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px;
+    box-shadow: 0 0 10px 0 rgb(167, 167, 167);
+    transition: transform 0.2s ease;
+    background-color: white;
 }
 
 .highlight-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .highlight-card img {
-width: 100%;
-height: 150px;
-object-fit: cover;
-border-radius: 8px;
-margin-bottom: 15px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .highlight-card h3 {
-font-size: 18px;
-margin-bottom: 10px;
-font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .highlight-card button {
-padding: 8px 16px;
-background-color: rgb(0, 0, 0);
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+    padding: 8px 16px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .highlight-card button:hover {
-background-color: #444;
+    background-color: #444;
 }
 
 
 /* featured car red */
 .featured-red {
-position: relative;
-width: 100%;
-height: 500px; 
-background-image: url('/assets/images/featurered.webp');
-background-size: cover;
-background-position: center;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    background-image: url('/assets/images/featurered.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-
 .featured-text {
-color: white;
-font-family: 'Roboto', sans-serif;
-max-width: 700px;
-padding: 20px;
-background: rgba(0, 0, 0, 0.5);
-/* border-radius: 10px; */
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    max-width: 700px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .featured-text h2 {
-font-size: 32px;
-margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .featured-text p {
-font-size: 18px;
-line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-/* wheel  maybach */
-
+/* wheel  maybach */
 .wheel-program {
-  padding: 60px 20px;
-  background-color: #f2f2f2;
-  font-family: 'Roboto', sans-serif;
+    padding: 60px 20px;
+    background-color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wheel-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  gap: 40px;
-  flex-wrap: wrap; /*lo hace mas responsv */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap; /*lo hace mas responsv */
 }
 
 .wheel-text {
-  flex: 1;
-  min-width: 300px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .wheel-text h3 {
-  font-size: 26px;
-  margin-bottom: 15px;
+    font-size: 26px;
+    margin-bottom: 15px;
 }
 
 .wheel-text p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
 }
 
 .wheel-text button {
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .wheel-text button:hover {
-  background-color: #444;
+    background-color: #444;
 }
 
 .wheel-image {
-  flex: 1;
-  min-width: 250px;
-  max-width: 400px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
 }
 
 .wheel-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 /* contact */
-
 .contact {
-display:flex;
-padding: 30px 0 20px 30px;
-justify-content: space-between;
-background-color: #666;
-color: white;
-font-family: Roboto;
-font-size: 14x;
-text-align: center;
-text
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #666;
+    color: white;
+    font-family: Roboto;
+}
+
+.contact p {
+    margin-bottom: 20px; 
+    font-size: 16px; 
+    line-height: 1.5;
 }
 
 .contact button {
-margin-right: 200px;
-padding: 10px 30px 10px 30px;
-border-radius: 80px;
-border: none;
+    margin: 0;
+    padding: 15px 40px;
+    border-radius: 80px;
+    border: none;
+    font-size: 16px;
 }
 
 .contact button:hover {
-background-color: #ccc;
+    background-color: #ccc;
 }
 
 /* footer */
 footer {
-background-color: #000; 
-color: white;
-padding: 60px 40px;
-font-family: 'Roboto', sans-serif;
-font-weight: 10;
+    background-color: #000; 
+    color: white;
+    padding: 60px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 10;
 }
 
 footer h3 {
-font-size: 24px;
-margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 footer .newsletter {
-text-align: center;
-margin-bottom: 60px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 footer .newsletter p {
-padding-bottom: 15px;
-font-weight: 100;
+    padding-bottom: 15px;
+    font-weight: 100;
 }
 
 .newsletter-form {
-display: flex;
-justify-content: center;
-gap: 10px;
-margin-bottom: 15px;
-flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .newsletter input[type="email"] {
-padding: 12px;
-font-size: 14px;
-border-radius: 4px;
-border: none;
-width: 300px;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 10px; 
 }
 
 .newsletter button {
-padding: 12px 20px;
-background-color: white;
-color: black;
-border: none;
-border-radius: 4px;
-font-weight: bold;
-cursor: pointer;
-transition: background-color 0.3s ease;
+    padding: 12px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 15px;
 }
 
 .newsletter button:hover {
-background-color: #ddd;
+    background-color: #ddd;
 }
 
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: #ccc;
-  font-size: 12px;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
-  padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ccc;
+    font-size: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 10px;
+    flex-direction: column; 
+    text-align: center;
+    max-width: 90%;
 }
 
 .checkbox-container input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: white; 
+    width: 16px;
+    height: 16px;
+    accent-color: white; 
 }
 
 .checkbox-container a {
-  color: #ccc;
-  text-decoration: underline;
+    color: #ccc;
+    text-decoration: underline;
 }
 
 .checkbox-container a:hover {
-  color: white;
+    color: white;
 }
 
 footer label {
-font-size: 12px;
-display: block;
-margin-top: 10px;
-color: #ccc;
+    font-size: 12px;
+    display: block;
+    margin-top: 10px;
+    color: #ccc;
 }
 
 .footer-links {
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
-border-top: 1px solid #444;
-padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-top: 1px solid #444;
+    padding-top: 40px;
 }
 
 .footer-links h4 {
-font-size: 16px;
-margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .footer-links ul {
-list-style: none;
-padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-links li {
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-links a {
-color: #ccc;
-text-decoration: none;
-font-size: 14px;
-transition: color 0.3s ease;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-color: white;
+    color: white;
 }
 
 .credits {
-text-align: center;
-padding: 20px;
-font-size: 12px;
-color: #ccc;
-background-color: black;
-font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #ccc;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Media Queries */
+
+/*correccion de la imagen en diferentes pantallas pa' evitar desajustes*/
+/*tablets por ej. menos altura*/
+@media (max-width: 1024px) {
+    .power {
+        padding-bottom: 350px;
+    }
+}
+
+/*moviles con menos altura*/
+@media (max-width: 768px) {
+    .power {
+        padding-bottom: 250px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .nav-links li {
+        padding: 10px 0;
+        width: 100%;
+    }
+    .icons {
+        margin-top: 10px;
+    }
+
+    .dealer-find h2 {
+        font-size: 32px;
+        margin: 20px;
+    }
+    .dealer-find p {
+        font-size: 14px;
+        margin: 10px 20px 30px;
+    }
+    .dealer-box img {
+        height: 400px;
+    }
+    .container-dealer {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        width: auto;
+        padding: 15px;
+    }
+    .container-dealer h3 {
+        font-size: 20px;
+    }
+    .container-dealer button {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .power {
+        padding-bottom: 180px; /*minimo*/
+    }
+    .power h1 {
+        font-size: 28px; /*titulo + pequeño ñ*/
+        margin: 15px 0 0 10px;
+    }
+    .power p {
+        font-size: 14px; /*subtitulo + pequeño */
+        margin: 50px 0 0 10px;
+    }
+}
